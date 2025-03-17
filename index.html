@@ -3,63 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a la escuela</title>
+    <title>Bienvenidos a la Escuela</title>
     <style>
         body {
-            background-color: #ffccff; /* Fondo rosa */
+            background-color: pink;
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
-            padding-top: 50px;
         }
-
-        h1 {
-            color: #333;
-            font-size: 36px;
-        }
-
-        .form-container {
-            margin-top: 30px;
-            display: inline-block;
-            background-color: #fff;
+        .container {
+            background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
-
-        input[type="text"], input[type="password"] {
+        .container h1 {
+            color: #333;
+        }
+        .container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
             padding: 10px;
             margin: 10px 0;
-            width: 250px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             border-radius: 5px;
         }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #ff66b2;
-            border: none;
+        .btn {
+            background-color: #4CAF50;
             color: white;
+            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
-
-        input[type="submit"]:hover {
-            background-color: #ff3399;
+        .btn:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenidos a la escuela</h1>
 
-    <!-- Logo de Escuelas Proa (reemplaza la URL de la imagen con la correcta) -->
-    <img src="https://www.example.com/logo-escuelas-proa.png" alt="Logo Escuelas Proa" width="150px">
-
-    <div class="form-container">
-        <h2>Iniciar sesión</h2>
-        <form action="#" method="POST">
-            <input type="text" name="usuario" placeholder="Usuario" required><br>
-            <input type="password" name="contrasena" placeholder="Contraseña" required><br
+    <div class="container">
+        <h1>Bienvenidos a la Escuela</h1>
+        <img src="https://www.ejemplo.com/escuela-proa.jpg" alt="Escuela Proa">
+        <form action="inicio.php" method="POST">
+            <input class="input-field" type="text" name="usuario" placeholder="Usuario" required>
+            <input class="input-field" type="password" name="contraseña" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Iniciar Sesión</button>
         </form>
     </div>
+
 </body>
 </html>
